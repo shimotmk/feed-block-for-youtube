@@ -1,0 +1,23 @@
+{
+	"apiVersion": 3,
+	"name": "feed-block-for-youtube/video",
+	"category": "widgets",
+	"title": "YouTube Feed Video",
+	"description": "Displays the title obtained from the URL.",
+	"textdomain": "feed-block-for-youtube",
+	"ancestor": [ "feed-block-for-youtube/feed-template" ],
+	"usesContext": [ "feedBlockForYouTubeUrl", "youtubeFeedBlockIndex" ],
+	"attributes": {
+		"isLightBox": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"html": false,
+		"reusable": false
+	},
+	"editorScript": "file:./index.js",
+	"viewScriptModule": "file:./view.js",
+	"style": "file:./style-index.css"
+}

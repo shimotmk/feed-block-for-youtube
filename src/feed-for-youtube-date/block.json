@@ -1,0 +1,50 @@
+{
+	"apiVersion": 3,
+	"name": "feed-block-for-youtube/date",
+	"category": "widgets",
+	"title": "YouTube Feed Date",
+	"description": "Displays the date obtained from the URL.",
+	"textdomain": "feed-block-for-youtube",
+	"ancestor": [ "feed-block-for-youtube/feed-template" ],
+	"attributes": {
+		"format": {
+			"type": "string"
+		},
+		"displayType": {
+			"type": "string",
+			"default": "date"
+		}
+	},
+	"usesContext": [ "feedBlockForYouTubeUrl", "youtubeFeedBlockIndex" ],
+	"supports": {
+		"color": {
+			"gradients": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"textAlign": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"html": false,
+		"reusable": false
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

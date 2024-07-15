@@ -1,0 +1,17 @@
+/.wordpress-org
+/.git
+/.github
+.husky/
+/node_modules
+/src
+/.editorconfig
+/.eslintrc
+/.wp-env.json
+/.wp-env.override.json
+/.gitignore
+/.distignore
+README.md
+package.json
+package-lock.json
+/.node-version
+/.git-pr-release-template

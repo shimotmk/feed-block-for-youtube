@@ -1,0 +1,47 @@
+{
+	"apiVersion": 3,
+	"name": "feed-block-for-youtube/title",
+	"category": "widgets",
+	"title": "YouTube Feed Title",
+	"description": "Displays the title obtained from the URL.",
+	"textdomain": "feed-block-for-youtube",
+	"ancestor": [ "feed-block-for-youtube/feed-template" ],
+	"attributes": {
+		"level": {
+			"type": "number",
+			"default": 5
+		}
+	},
+	"usesContext": [ "feedBlockForYouTubeUrl", "youtubeFeedBlockIndex" ],
+	"supports": {
+		"color": {
+			"gradients": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"textAlign": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"html": false,
+		"reusable": false
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

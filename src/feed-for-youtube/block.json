@@ -1,0 +1,55 @@
+{
+	"apiVersion": 3,
+	"name": "feed-block-for-youtube/youtube-feed",
+	"category": "widgets",
+	"title": "YouTube Feed",
+	"description": "Get the feed from a YouTube URL.",
+	"attributes": {
+		"itemsToShow": {
+			"type": "number",
+			"default": 12
+		},
+		"url": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"providesContext": {
+		"feedBlockForYouTubeItemsToShow": "itemsToShow",
+		"feedBlockForYouTubeUrl": "url"
+	},
+	"textdomain": "feed-block-for-youtube",
+	"supports": {
+		"interactivity": true,
+		"align": [ "wide", "full" ],
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"width": true
+			}
+		},
+		"color": {
+			"gradients": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"padding": true
+			}
+		},
+		"shadow": true,
+		"layout": true,
+		"html": false
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}
