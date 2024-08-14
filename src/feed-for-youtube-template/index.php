@@ -8,7 +8,7 @@
 /**
  * Renders the `feed-block-for-youtube/feed-template` block on the server.
  */
-function feed_block_for_youtube_youtube_feed_template_render_callback( $attributes, $content, $block ) {
+function simple_feed_block_for_youtube_youtube_feed_template_render_callback( $attributes, $content, $block ) {
 	$embed_url = isset( $block->context['feedBlockForYouTubeUrl'] ) ? $block->context['feedBlockForYouTubeUrl'] : "";
 	$items_to_show = isset( $block->context['feedBlockForYouTubeItemsToShow'] ) ? $block->context['feedBlockForYouTubeItemsToShow'] : "";
 	$data  = Feed_Block_For_YouTube::get_feed_data( $embed_url );
@@ -75,7 +75,7 @@ function simple_feed_block_for_youtube_register_block_youtube_template() {
 	register_block_type(
 		__DIR__,
 		array(
-			'render_callback'   => 'feed_block_for_youtube_youtube_feed_template_render_callback',
+			'render_callback'   => 'simple_feed_block_for_youtube_youtube_feed_template_render_callback',
 			'skip_inner_blocks' => true,
 		)
 	);

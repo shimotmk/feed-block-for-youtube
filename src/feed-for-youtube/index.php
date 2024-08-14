@@ -12,7 +12,7 @@
  * @param string $content Inner content.
  * @return string
  */
-function Feed_Block_For_YouTube_render_callback( $attributes, $content ) {
+function simple_feed_block_for_youtube_render_callback( $attributes, $content ) {
 	if ( ! isset( $attributes['url'] ) ) {
 		return null;
 	}
@@ -38,7 +38,7 @@ function simple_feed_block_for_youtube_register_block_youtube_feed() {
 	register_block_type(
 		__DIR__,
 		array(
-			'render_callback' => 'Feed_Block_For_YouTube_render_callback',
+			'render_callback' => 'simple_feed_block_for_youtube_render_callback',
 		)
 	);
 }

@@ -13,7 +13,7 @@
  * @param object $block block.
  * @return string
  */
-function Feed_Block_For_YouTube_date_render_callback( $attributes, $content, $block ) {
+function simple_feed_block_for_youtube_date_render_callback( $attributes, $content, $block ) {
 	if ( ! isset( $block->context['feedBlockForYouTubeUrl'] ) ) {
 		return null;
 	}
@@ -65,7 +65,7 @@ function simple_feed_block_for_youtube_register_block_date() {
 	register_block_type(
 		__DIR__,
 		array(
-			'render_callback' => 'Feed_Block_For_YouTube_date_render_callback',
+			'render_callback' => 'simple_feed_block_for_youtube_date_render_callback',
 		)
 	);
 }

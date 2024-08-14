@@ -7,14 +7,14 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; 
 
-if ( class_exists( 'FeedBlockForYouTubeEntryPoint' ) ) {
+if ( class_exists( 'SimpleFeedBlockForYouTubeEntryPoint' ) ) {
 	return;
 }
 
 /**
- * Feed_Block_For_YouTube_FeedBlockForYouTubeEntryPoint
+ * Feed_Block_For_YouTube_SimpleFeedBlockForYouTubeEntryPoint
  */
-class FeedBlockForYouTubeEntryPoint {
+class SimpleFeedBlockForYouTubeEntryPoint {
 	/**
 	 * Constructor
 	 */
@@ -60,4 +60,4 @@ class FeedBlockForYouTubeEntryPoint {
 		);
 	}
 }
-new FeedBlockForYouTubeEntryPoint();
+new SimpleFeedBlockForYouTubeEntryPoint();

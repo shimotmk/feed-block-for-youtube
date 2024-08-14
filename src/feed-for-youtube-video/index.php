@@ -13,7 +13,7 @@
  * @param object $block block.
  * @return string
  */
-function Feed_Block_For_YouTube_video_render_callback( $attributes, $content, $block ) {
+function simple_feed_block_for_youtube_video_render_callback( $attributes, $content, $block ) {
 	if ( ! isset( $block->context['feedBlockForYouTubeUrl'] ) ) {
 		return null;
 	}
@@ -63,7 +63,7 @@ function Feed_Block_For_YouTube_video_render_callback( $attributes, $content, $b
 		<svg width="68" height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg>
 	</div>';
 
-	add_action( 'wp_footer', 'Feed_Block_For_YouTube_print_lightbox_overlay' );
+	add_action( 'wp_footer', 'simple_feed_block_for_youtube_print_lightbox_overlay' );
 
 	return sprintf(
 		'<div %1$s data-wp-interactive="feed-block-for-youtube/video" data-wp-context=%2$s id="%4$s">
@@ -90,7 +90,7 @@ function Feed_Block_For_YouTube_video_render_callback( $attributes, $content, $b
 
 /**
  */
-function feed_block_for_youtube_print_lightbox_overlay() {
+function simple_feed_block_for_youtube_print_lightbox_overlay() {
   $close_button_label = esc_attr__( 'Close' );
 
   $background_color   = '#fff';
@@ -162,7 +162,7 @@ function simple_feed_block_for_youtube_register_block_embed_video_player() {
 	register_block_type(
 		__DIR__,
 		array(
-			'render_callback' => 'Feed_Block_For_YouTube_video_render_callback',
+			'render_callback' => 'simple_feed_block_for_youtube_video_render_callback',
 		)
 	);
 }

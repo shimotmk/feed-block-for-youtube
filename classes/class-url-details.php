@@ -153,7 +153,7 @@ class Feed_Block_For_YouTube {
 	 * @return string The cache key.
 	 */
 	public static function build_cache_key_for_url( $url ) {
-		return FEED_BLOCK_FOR_YOUTUBE_OPTION_PREFIX . 'g_url_details_response_' . md5( $url );
+		return SIMPLE_FEED_BLOCK_FOR_YOUTUBE_OPTION_PREFIX . 'g_url_details_response_' . md5( $url );
 	}
 
 	/**

@@ -13,7 +13,7 @@
  * @param object $block block.
  * @return string
  */
-function Feed_Block_For_YouTube_title_render_callback( $attributes, $content, $block ) {
+function simple_feed_block_for_youtube_title_render_callback( $attributes, $content, $block ) {
 	if ( ! isset( $block->context['feedBlockForYouTubeUrl'] ) ) {
 		return null;
 	}
@@ -73,7 +73,7 @@ function simple_feed_block_for_youtube_register_block_embed_title() {
 	register_block_type(
 		__DIR__,
 		array(
-			'render_callback' => 'Feed_Block_For_YouTube_title_render_callback',
+			'render_callback' => 'simple_feed_block_for_youtube_title_render_callback',
 		)
 	);
 }
